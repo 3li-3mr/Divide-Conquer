@@ -10,7 +10,8 @@ public class Point {
     }
 
     public double distanceTo(Point other) {
-        // TODO: Compute Euclidean distance
-        throw new UnsupportedOperationException("distanceTo not implemented yet.");
+        long dx = this.x - other.x;
+        long dy = this.y - other.y;
+        return Math.sqrt(dx * dx + dy * dy);
     }
 }
