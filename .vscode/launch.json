@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Run Problem 1 (Selection)",
+            "request": "launch",
+            "mainClass": "problem1.Main",
+            "vmArgs": "-Xmx4G -Xss64M"
+        },
+        {
+            "type": "java",
+            "name": "Run Problem 2 (Min Perimeter)",
+            "request": "launch",
+            "mainClass": "problem2.Main",
+            "args": "data/sample_input.txt",
+            "vmArgs": "-Xmx2G -Xss64M"
+        }
+    ]
+}
