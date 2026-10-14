@@ -1,10 +1,8 @@
 package problem1;
 
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class RandomizedSelect implements SelectionAlgorithm {
-
-    private final Random rand = new Random(42);
 
     @Override
     public int select(int[] arr, int k) {
@@ -33,7 +31,7 @@ public class RandomizedSelect implements SelectionAlgorithm {
 
     private int randomizedPartition(int[] arr, int left, int right) {
         
-        int r = left + rand.nextInt(right - left + 1);
+        int r = ThreadLocalRandom.current().nextInt(left, right + 1);
         swap(arr, left, r);
         int j = left + 1;
         for(int i = left+1; i <= right; i++){
