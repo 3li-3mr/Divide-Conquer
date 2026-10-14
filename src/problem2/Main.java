@@ -9,17 +9,24 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(in));
         PrintWriter out = new PrintWriter(new BufferedOutputStream(System.out));
 
+        MinPerimeterSolver solver = new MinPerimeterSolver();
+
         String line;
         while ((line = br.readLine()) != null) {
             line = line.trim();
             if (line.isEmpty()) continue;
+
             int n = Integer.parseInt(line);
+            Point[] points = new Point[n];
+
             for (int i = 0; i < n; i++) {
                 StringTokenizer st = new StringTokenizer(br.readLine());
                 long x = Long.parseLong(st.nextToken());
                 long y = Long.parseLong(st.nextToken());
+                points[i] = new Point(x, y);
             }
-            double minPerimeter = 0.0;
+
+            double minPerimeter = solver.solve(points);
             out.printf(Locale.US, "%.3f%n", minPerimeter);
         }
         out.flush();
