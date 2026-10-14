@@ -1,11 +1,13 @@
 package problem1;
 
+import java.util.Arrays;
+
 public class NaiveSortSelect implements SelectionAlgorithm {
 
     @Override
     public int select(int[] arr, int k) {
-        // TODO: Sort using native Arrays.sort() and return k-th element
-        throw new UnsupportedOperationException("NaiveSortSelect not implemented yet.");
+        Arrays.sort(arr);
+        return arr[k];
     }
 
     @Override
